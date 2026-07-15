@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+
 namespace Webshop
 {
     public class Program
@@ -5,6 +7,10 @@ namespace Webshop
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            builder.Services.AddDbContext<DbContext>(options =>
+            options.UseMySQL(
+            builder.Configuration.GetConnectionString("DefaultConnection")));
 
             // Add services to the container.
             builder.Services.AddRazorPages();
