@@ -7,9 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\Account\Admin\" />
-    <Folder Include="Pages\Account\" />
-    <Folder Include="Pages\Account\User\" />
+    <Folder Include="Pages\Users\Admin\" />
+    <Folder Include="Pages\Users\" />
+    <Folder Include="Pages\Users\User\" />
   </ItemGroup>
 
   <ItemGroup>

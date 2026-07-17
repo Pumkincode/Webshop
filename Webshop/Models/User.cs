@@ -21,8 +21,6 @@ public partial class User
 
     public string Password { get; set; } = null!;
 
-    public string? ImageUrl { get; set; }
-
     public int RoleId { get; set; }
 
     public DateTime? CreatedDate { get; set; }

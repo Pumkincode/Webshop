@@ -1,0 +1,76 @@
+﻿@page
+@model Webshop.Pages.LoginModel
+@{
+    // the title of the page is set to "Login" in the ViewData dictionary, 
+    // which can be used in the layout or other parts of the page to display 
+    //  title dynamically.
+    ViewData["Title"] = "Login";
+}
+
+
+
+<div class="login-container">
+
+    <div class="text-center mb-4">
+        <h1>Üdvözöl a <span>Edző Segéd</span>!</h1>
+        <p>Itt találkozik a kitartás és a szakértelem.</p>
+    </div>
+
+   
+    <form method="post">
+
+       
+        <div asp-validation-summary="All" class="text-danger mb-3"></div>
+
+        <div class="form-group">
+
+            <img src="~/Images/username1.png" alt="user icon" />
+
+        
+           @*  <label asp-for="Username">Felhasználónév:</label>
+
+           
+            <input asp-for="Username" class="form-control" />
+
+            <span asp-validation-for="Username" class="text-danger"></span>
+        </div>
+
+       
+        <div class="form-group">
+
+            <!-- Ikon a jelszó mező mellett -->
+            <img src="~/Images/password1.png" alt="lock icon" />
+
+            <label asp-for="Password">Jelszó:</label>
+
+            <!-- Jelszó típusú input (karakterek elrejtve) -->
+            <input asp-for="Password" type="password" class="form-control" />
+
+            <!-- Jelszóhoz tartozó validációs hiba -->
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div> *@
+
+       
+        <div class="form-group show-password">
+
+            <img src="~/Images/show1.png" alt="eye icon" />
+
+            <input type="checkbox" id="showPassword" />
+            <label for="showPassword">Jelszó mutatása</label>
+        </div>
+
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary">
+                Bejelentkezés
+            </button>
+        </div>
+
+   
+        <div class="register-link mt-3">
+            <a asp-page="/Register">
+                Ha még nincs fiókja, regisztráljon itt.
+            </a>
+        </div>
+
+    </form>
+</div>

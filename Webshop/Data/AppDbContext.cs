@@ -11,7 +11,7 @@ public partial class AppDbContext : DbContext
     {
     }
 
-    public AppDbContext(DbContextOptions<DbContext> options)
+    public AppDbContext(DbContextOptions<AppDbContext> options)
         : base(options)
     {
     }
@@ -290,9 +290,6 @@ public partial class AppDbContext : DbContext
                 .HasColumnType("datetime");
             entity.Property(e => e.Email)
                 .HasMaxLength(50)
-                .HasDefaultValueSql("'NULL'");
-            entity.Property(e => e.ImageUrl)
-                .HasMaxLength(255)
                 .HasDefaultValueSql("'NULL'");
             entity.Property(e => e.Mobile)
                 .HasMaxLength(50)
